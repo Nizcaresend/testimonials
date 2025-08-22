@@ -194,120 +194,7 @@ body {
     line-height: 1.6;
 }
 
-.video-iframe {
-    width: 100%;
-    height: 100%;
-}
-
-/* Updated grid for the Wellness Initiatives section */
-/* Updated grid for the Wellness Initiatives section */
-.initiatives-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.initiative-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    border: 1px solid #e9ecef;
-    width: 100%;
-}
-
-.initiative-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(30, 166, 154, 0.15);
-}
-
-.initiative-image {
-    width: 100%;
-    /* New property to maintain aspect ratio */
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
-
-.initiative-content {
-    padding: 25px;
-}
-
-.initiative-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.initiative-description {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-size: 0.95rem;
-}
-
-.initiative-button {
-    background: linear-gradient(45deg, #1ea69a, #57bcb3);
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: transform 0.3s ease;
-}
-
-.initiative-button:hover {
-    transform: scale(1.05);
-}
-
-/* Add media query for responsiveness */
-@media (max-width: 768px) {
-    .initiatives-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Make sure to remove the old .initiatives-grid-2 and .initiatives-grid-3-2 CSS if you had it */
-
-.impact-section {
-    background: #f8f9fa;
-    text-align: center;
-}
-
-.impact-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.impact-stat {
-    padding: 20px;
-}
-
-.impact-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #1ea69a;
-    margin-bottom: 10px;
-}
-
-.impact-text {
-    color: #666;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
+/* Video Player Styles */
 .video-section {
     background: linear-gradient(135deg, #1ea69a 0%, #0f2027 100%);
     color: white;
@@ -317,9 +204,8 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    /* Sets the aspect ratio to 16:9 (height is 56.25% of the width) */
     aspect-ratio: 16 / 9;
-    overflow: hidden; /* Ensures the thumbnail and video don't spill out */
+    overflow: hidden;
     cursor: pointer;
 }
 
@@ -330,7 +216,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the video is fully visible within the container */
+}
+
+.video-thumbnail {
+    object-fit: contain;
+}
+
+.video-element {
+    object-fit: cover;
 }
 
 .video-thumbnail:hover {
@@ -433,6 +326,104 @@ body {
 
 .video-stats {
     display: none; /* Hides the old stats */
+}
+
+/* Updated grid for the Wellness Initiatives section */
+.initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.initiative-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    width: 100%;
+}
+
+.initiative-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(30, 166, 154, 0.15);
+}
+
+.initiative-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.initiative-content {
+    padding: 25px;
+}
+
+.initiative-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.initiative-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.initiative-button {
+    background: linear-gradient(45deg, #1ea69a, #57bcb3);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.initiative-button:hover {
+    transform: scale(1.05);
+}
+
+.impact-section {
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.impact-stat {
+    padding: 20px;
+}
+
+.impact-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1ea69a;
+    margin-bottom: 10px;
+}
+
+.impact-text {
+    color: #666;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .cta-section {
@@ -567,7 +558,6 @@ body {
     display: flex;
     align-items: flex-start;
     margin-bottom: 15px;
-    
 }
 
 .reason-check {
@@ -632,20 +622,18 @@ body {
     margin-bottom: 30px;
 }
 
-/* New Modal Styles for Split Layout */
-/* You must have this back in your CSS */
+/* Modal for Gallery */
 .modal {
-    display: none; /* This is what initially hides the pop-up */
-    position: fixed; /* This makes it stay in the same place on the viewport */
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.9); /* The dark, transparent background */
-    z-index: 1000; /* Crucial for placing it on top of all other content */
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
 }
 
-/* Your existing .modal-content-new is correct, but it relies on .modal being its parent */
 .modal-content-new {
     position: absolute;
     top: 50%;
@@ -660,6 +648,7 @@ body {
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,0.3);
     display: flex;
+    z-index: 1001;
 }
 
 .modal-container {
@@ -669,13 +658,13 @@ body {
 }
 
 .modal-gallery-carousel {
-    flex: 2; /* Takes up 2/3 of the space */
+    flex: 2;
     position: relative;
     overflow: hidden;
 }
 
 .modal-details {
-    flex: 1; /* Takes up 1/3 of the space */
+    flex: 1;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -690,7 +679,7 @@ body {
     cursor: pointer;
     color: #1ea69a;
     font-weight: bold;
-    z-index: 10; /* Make sure the close button is on top */
+    z-index: 10;
 }
 
 .gallery-carousel {
@@ -701,7 +690,7 @@ body {
 }
 
 .gallery-carousel-item {
-    min-width: 100%; /* Each item takes the full width of the container */
+    min-width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
@@ -754,35 +743,42 @@ body {
     line-height: 1.6;
 }
 
-/* Media query for smaller screens */
+/* Media Query for Mobile Responsiveness */
 @media (max-width: 768px) {
-    .modal-container {
-        flex-direction: column;
-        overflow-y: auto;
+    /* General adjustments for all sections */
+    .section {
+        padding: 40px 0;
+    }
+    .container {
+        padding: 0 15px;
     }
 
-    .modal-details {
-        padding: 20px;
-        flex: none; /* Reset flex for column layout */
-    }
-}
-
-@media (max-width: 768px) {
+    /* Hero section font and spacing */
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .hero .subtitle {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     
     .hero-stats {
-        gap: 30px;
+        gap: 20px;
     }
     
-    .initiatives-grid-3-2,
-    .initiatives-grid-2 {
+    .logo-container {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .logo {
+        height: 30px;
+    }
+
+    /* Grid layouts for various sections */
+    .initiatives-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .impact-stats {
@@ -790,6 +786,7 @@ body {
         gap: 20px;
     }
 
+    /* CTA section and form */
     .cta-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -797,9 +794,26 @@ body {
     
     .form-row {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    /* Video section */
     .video-stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Modal for activities */
+    .modal-container {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .modal-details {
+        padding: 20px;
+        flex: none;
     }
 }
